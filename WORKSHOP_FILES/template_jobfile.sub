@@ -1,0 +1,31 @@
+#!/bin/bash
+#PBS -l vmem=64Gb,pmem=4Gb,mem=64Gb
+#PBS -l nodes=1:ppn=16:compute
+#PBS -l walltime=48:00:00
+#PBS -N JOBNAME
+#PBS -o ${PBS_JOBNAME}.o${PBS_JOBID} -e ${PBS_JOBNAME}.e${PBS_JOBID}
+#PBS -m ae -M youremail@iastate.com
+cd $PBS_O_WORKDIR
+echo "################ STATS ##################"
+SSECS=$(date +"%s")
+echo ${SSECS}
+START=$(date +"%r, %m-%d-%Y")
+echo -e "Host\t\t: $(hostname)"
+echo -e "Processors\t: $(wc -l < $PBS_NODEFILE)"
+echo -e "Nodes\t\t: $(uniq $PBS_NODEFILE | wc -l)"
+echo -e "Total memory\t: $(free | grep Mem | awk '{print $2/1048576}' OFMT="%2.2f") Gb"
+echo -e "Free memory\t: $(free | grep Mem | awk '{print $4/1048576}' OFMT="%2.2f") Gb"
+echo -e "Directory\t: $(pwd)"
+chmod g+rw ${PBS_JOBNAME}.[eo]${PBS_JOBID}
+echo "#########################################"
+module use /data004/software/GIF/modules
+module load moduleaname
+## SCRIPT #####################################
+
+
+
+echo "############# TIME STAMP ################"
+DIFF=$((`date +"%s"`-${SSECS}))
+printf "Start\t\t:${START}\nEnd\t\t:$(date +"%r, %m-%d-%Y")\nTIME (hh:mm:ss)\t:%02d:%02d:%02d\n" "$((${DIFF}/3600))" "$(((DIFF%3600)/60))" "$(((DIFF%3600)%60))"
+echo "#########################################"
+
