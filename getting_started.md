@@ -4,7 +4,9 @@ Open the terminal and enter these commands (commands are case sensitive) and eac
 ```bash
 wget http://www.public.iastate.edu/~arnstrm/WORKSHOP_FILES.tar.gz
 tar –xvzf WORKSHOP_FILES.tar.gz
+```
 Once your cursor (command prompt) comes back to the original position, type
+```bash
 ls 
 ```
 You should see WORKSHOP_FILES listed there.
