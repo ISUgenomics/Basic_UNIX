@@ -9,13 +9,13 @@ Typing
 ```bash
 pwd
 ```
-should return `/home/username`. Basically, it returns you the _p_resent _w_orking _d_irectory (print working directory).
+should return `/home/username`. Basically, it returns you the present working directory (*p*rint *w*orking *d*irectory).
 This means, you are now working in the `username` directory, which is located in `home` directory. The directory that you will be in after logging in is your home directory. You can also avoid writing the full path by using ~ in front of your username.
 `~username` 	same as	`/home/username`
 Present directory is represented as `.` (dot) and parent directory is represented as `..` (dot dot)
 
 ### Changing directories
-To jump from one directory to another we use the cd (change directory) command.
+To jump from one directory to another we use the cd (_c_hange _d_irectory) command.
 ```bash
 cd ..
 ```
@@ -31,16 +31,18 @@ You can type in first few letters of the directory name and then press tab to au
 ## Directories and files
 ### Making Directories
 
-To create a directory, `mkdir` (make directory) can be used.
+To create a directory, `mkdir` (*m*a_k_e *dir*ectory) can be used.
 ```bash
 mkdir DIRECTORY
 ```
 Unlike PC/Mac folders, here you can’t have space in your directory name. Alternatively, you can also specify the path where you want to create your new folder.
+
 **Task 1.2: Make a new directory named `FirstDirectory` within the `WORKSHOP_FILES` directory. Then change your directory to the `FirstDirectory`.**
-```
+```bash
 mkdir FirstDirectory
-COPYING DIRECTORIES
-To copy a file, cp (copy) command is used. When using this command you have to provide both source file and destination file.
+```
+### Copying files/directories
+To copy a file, `cp` (*c*o_p_y) command is used. When using this command you have to provide both source file and destination file.
 cp SOURCE DESTINATION
 You can also specify the absolute path of the source and/or destination file. To know more about any command you can use man command, which opens the manual of the command you ask.
 man cp
