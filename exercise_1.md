@@ -1,28 +1,43 @@
-# UNIX EXERCISE 1
+# Exercise 1
 This exercise is designed to provide the basic skills required for working in the UNIX environment, using plenty of relevant examples, specifically for biologists.  If you are using your personal computer, make sure that you have downloaded the files required for the workshop. This exercise will provide you information regarding navigation, files and directory creation/modification and some administrative things related to file permissions.
-NAVIAGATION
+
+## Navigation
 This section will introduce you to some basic file/directory navigation and manipulation techniques.
-TO KNOW THE PRESENT LOCATION OF YOUR COMMAND
+
+### Knowing present location for your command prompt
+Typing
+```bash
 pwd
-/home/username
-Returns you the present working directory (print working directory) 
-This means, you are now working in the username directory, which is located in home directory. The directory that you will be in after logging in is your home directory. You can also avoid writing the full path by using ~ in front of your username.
-~username 	same as	/home/username
-Present directory is represented as . (dot) and parent directory is represented as .. (dot dot)
-CHANGING DIRECTORIES
+```
+should return `/home/username`. Basically, it returns you the _p_resent _w_orking _d_irectory (print working directory).
+This means, you are now working in the `username` directory, which is located in `home` directory. The directory that you will be in after logging in is your home directory. You can also avoid writing the full path by using ~ in front of your username.
+`~username` 	same as	`/home/username`
+Present directory is represented as `.` (dot) and parent directory is represented as `..` (dot dot)
+
+### Changing directories
 To jump from one directory to another we use the cd (change directory) command.
+```bash
 cd ..
-Changes your present location to the parent directory 
+```
+Changes your present location to the parent directory. 
+```bash
 cd DIRECTORY
+```
 This changes your location back to your DIRECTORY. 
-Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory. 
-NOTE: You can type in first few letters of the directory name and then press tab to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing tab twice will list all the matching names. You can also recall your previous commands by pressing up/down arrow or browse all your previously used commands by typing history on your terminal (typically last 500 commands will be saved in this file).
-DIRECTORIES AND FILES
-MAKING DIRECTORIES 
-To create a directory, mkdir (make directory) can be used.
+**Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.** 
+
+You can type in first few letters of the directory name and then press tab to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing tab twice will list all the matching names. You can also recall your previous commands by pressing up/down arrow or browse all your previously used commands by typing history on your terminal (typically last 500 commands will be saved in this file).
+
+## Directories and files
+### Making Directories
+
+To create a directory, `mkdir` (make directory) can be used.
+```bash
 mkdir DIRECTORY
+```
 Unlike PC/Mac folders, here you can’t have space in your directory name. Alternatively, you can also specify the path where you want to create your new folder.
-Task 1.2: Make a new directory named FirstDirectory within the WORKSHOP_FILES directory. Then change your directory to the FirstDirectory.
+**Task 1.2: Make a new directory named `FirstDirectory` within the `WORKSHOP_FILES` directory. Then change your directory to the `FirstDirectory`.**
+```
 mkdir FirstDirectory
 COPYING DIRECTORIES
 To copy a file, cp (copy) command is used. When using this command you have to provide both source file and destination file.
