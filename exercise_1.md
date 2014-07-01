@@ -23,7 +23,8 @@ Changes your present location to the parent directory.
 ```bash
 cd DIRECTORY
 ```
-This changes your location back to your DIRECTORY. 
+This changes your location back to your `DIRECTORY`.
+ 
 **Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.** 
 
 You can type in first few letters of the directory name and then press tab to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing tab twice will list all the matching names. You can also recall your previous commands by pressing up/down arrow or browse all your previously used commands by typing history on your terminal (typically last 500 commands will be saved in this file).
@@ -42,23 +43,35 @@ Unlike PC/Mac folders, here you can’t have space in your directory name. Alter
 mkdir FirstDirectory
 ```
 ### Copying files/directories
+
 To copy a file, `cp` (*c*o_p_y) command is used. When using this command you have to provide both source file and destination file.
+```bash
 cp SOURCE DESTINATION
-You can also specify the absolute path of the source and/or destination file. To know more about any command you can use man command, which opens the manual of the command you ask.
+```
+You can also specify the absolute path of the source and/or destination file. To know more about any command you can use `man` command, which opens the manual of the command you ask.
+```bash
 man cp
-This opens the manual for the cp command. Take a look at the manual of cp command (use arrow keys to move top or bottom of the page). OPTIONS are optional parameters that can be used to accomplish more from the same command. Eg., by using option –i with the regular cp command, you can always make sure that you are not overwriting the existing file while copying. The syntax for using the options will also be provided in the manual. To exit, press q.
-Looking at the man page for cp command, what options can be used to copy a directory (including all files within it)?								____________________
-How else you can get help on cp command (other than ‘man’)? 		____________________
-Task 1.3: Now change your directory back to the home directory. Create a copy of WORKSHOP_FILES and name it as BACKUP_WORKSHOP). This will serve as a backup copy of all files that are required for the workshop (in case you accidentally modify the contents while working).
+```
+This opens the manual for the `cp` command. Take a look at the manual of `cp` command (use arrow keys to move top or bottom of the page). `OPTIONS` are optional parameters that can be used to accomplish more from the same command. _Eg.,_ by using option `–i` with the regular `cp` command, you can always make sure that you are not overwriting the existing file while copying. The syntax for using the options will also be provided in the manual. **To exit, press q.**
+
+Looking at the man page for `cp` command, what options can be used to copy a directory (including all files within it)?	
+How else you can get help on `cp` command (other than `man`)?
+
+**Task 1.3: Now change your directory back to the home directory. 
+Create a copy of `WORKSHOP_FILES` and name it as `BACKUP_WORKSHOP`).**
+This will serve as a backup copy of all files that are required for the workshop (in case you accidentally modify the contents while working).
+```bash
 cp -r WORKSHOP_FILES BACKUP_WORKSHOP
-MOVING DIRECTORIES
+```
+### Moving directories
 To move a file or a directory, mv (move) command is used. Again, like the cp command you need to provide both source file and destination file.
 mv SOURCE DESTINATION
 Absolute path also works fine. Some of the options used by cp command also work with mv command. mv can also be used to rename files and directories
 mv OLDNAME NEWNAME
 Task 1.4: Rename WORKSHOP_FILES as tutorials. 
 mv WORKSHOP_FILES tutorials
-VIEWING THE CONTENTS OF THE DIRECTORY
+
+## VIEWING THE CONTENTS OF THE DIRECTORY
 The contents of a dir can be viewed using ls (list) command. 
 ls DIRECTORY		# now try it with tutorials directory 
 If no directory name is provided then ls will list all the contents of the present directory.  
@@ -79,7 +92,7 @@ ls -a
 ls -1 tutorials
 ls -lh tutorials
 ls -t tutorials
-CREATING AND EDITING FILES
+## CREATING AND EDITING FILES
 touch FILENAME
 Creates a new file in the present location
 nano FILENAME
@@ -88,7 +101,7 @@ Task 1.6: Create a new file named firstfile inside the tutorials directory. You 
 touch firstfile
 nano firstfile
 
-VIEWING CONTENTS OF THE FILES
+## VIEWING CONTENTS OF THE FILES
 There are various commands to print the contents of the file in bash. Most of these commands are often used in specific contexts. All these commands when executed with filenames displays the contents on the screen. Most common ones are less, more, cat, head and tail.
 less FILENAME			try this: less AT_cDNA.fa
 Displays file contents on the screen with line scrolling (to scroll you can use arrow keys, PgUp/PgDn keys, space bar or Enter key). When you are done press q to exit.
@@ -102,7 +115,8 @@ tail FILENAME			try this: tail AT_cDNA.fa
 Similar to head, but displays the last 10 lines. Again –n option can be used to change this.
 More information about any of these commands can be found in man pages (man command)
 Task 1.7: Try using all these commands on the RefSeq.faa. You are also welcome to try these commands on various other files that are present in the tutorials directory. These commands don’t change the contents of the file; they just display them on the screen.
-DELETING FILES AND DIRECTORIES
+
+## DELETING FILES AND DIRECTORIES
 To delete directories from the system, you can use rmdir (remove directory) command. You can also use rm command to delete file(s).
 rmdir DIRECTORY
 The directory should be empty before you use the rmdir command. 
@@ -118,7 +132,8 @@ cd delete_me
 rm sample.txt
 cd ..
 rmdir delete_me
-COMPRESSING FILES
+
+## COMPRESSING FILES
 There are several options for archiving and compressing groups of files or directories. Compressed files are not only easier to handle (copy/move) but also occupy less size on the disk (less than 1/3 of the original size). In Linux systems you can use zip, tar or gz for archiving and compressing files/directories. 
 ZIP compression/extraction
 zip OUTFILE.zip INFILE.txt
@@ -159,8 +174,8 @@ gzip AT_genes.gff
 ls -lh
 gunzip AT_genes.gff.gz
 ls –lh
-ADMINISTRATIVE COMMANDS
-CHANGING PERMISSIONS
+## ADMINISTRATIVE COMMANDS
+### CHANGING PERMISSIONS
 All files in the UNIX system will have a set of permissions which define what can be done with that file and by whom. (What = read (view contents), write (modify) and execute (run script) Whom=User (owner), group (that account belongs to) and everyone else). They are denoted as
 PERMISSIONS				RELATIONS
 read		r			owner		u
@@ -192,7 +207,4 @@ ls -l
 What permissions does the group have on these files?  			________________________
 Which group does your account belong to?				________________________
 		Genome Informatics Facility
-
-
-1
 
