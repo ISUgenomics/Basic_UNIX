@@ -12,13 +12,13 @@ Once your cursor (command prompt) comes back to the original position, type
 ```bash
 ls 
 ```
-You should see WORKSHOP_FILES listed there.
+You should see `WORKSHOP_FILES` listed there.
 
-PS: hand-outs/files are also available for download at https://github.com/ISUgenomics/Basic_UNIX
+Download the handout for the class from [GitHub] (https://github.com/ISUgenomics/Basic_UNIX/blob/master/UNIX_exercises_all.pdf?raw=true)
 
 NB: If you are on MAC and don't have `wget` command use `curl` instead.
 ```bash
 curl -O http://www.public.iastate.edu/~arnstrm/WORKSHOP_FILES.tar.gz
 ```
 
-Next: move to Exercise I 
+Next: move to [Exercise I] (https://github.com/ISUgenomics/Basic_UNIX/blob/manpage/exercise_1.md) 
