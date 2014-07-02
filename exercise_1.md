@@ -4,18 +4,18 @@ This exercise is designed to provide the basic skills required for working in th
 ## Navigation
 This section will introduce you to some basic file/directory navigation and manipulation techniques.
 
-### Knowing present location for your command prompt
-Typing
+### Knowing present location
+Current position of your command prompt can be known by typing
 ```bash
 pwd
 ```
-should return `/home/username`. Basically, it returns you the present working directory (*p* rint *w* orking *d* irectory).
+this returns `/home/username` (or whatever the location you are in). Basically, it returns you the present working directory (*p* rint *w* orking *d* irectory).
 This means, you are now working in the `username` directory, which is located in `home` directory. The directory that you will be in after logging in is your home directory. You can also avoid writing the full path by using ~ in front of your username.
 `~username` 	same as	`/home/username`
 Present directory is represented as `.` (dot) and parent directory is represented as `..` (dot dot)
 
 ### Changing directories
-To jump from one directory to another we use the cd (_c_hange _d_irectory) command.
+To jump from one directory to another we use the cd ( _c_ hange _d_ irectory) command.
 ```bash
 cd ..
 ```
@@ -32,7 +32,7 @@ You can type in first few letters of the directory name and then press tab to au
 ## Directories and files
 ### Making Directories
 
-To create a directory, `mkdir` (*m*a_k_e *dir*ectory) can be used.
+To create a directory, `mkdir` ( *m* a _k_ e *dir* ectory) can be used.
 ```bash
 mkdir DIRECTORY
 ```
