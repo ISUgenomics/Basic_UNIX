@@ -83,7 +83,7 @@ mv OLDNAME NEWNAME
 ```bash
 mv WORKSHOP_FILES tutorials
 ```
-## VIEWING THE CONTENTS OF THE DIRECTORY
+## Listing directory contents
 The contents of a dir can be viewed using ls (list) command. 
 ```bash
 ls DIRECTORY		# now try it with tutorials directory 
@@ -101,7 +101,7 @@ Looking at the manual for ls, what option can you use to view hidden files in a 
 
 Can you sort the files based on its extension? How?			____________________
 
-** Task 1.5: Examine the contents of the tutorials directory. Try options such as -l, -t, -a and -X. Also check if you can combine many options together (like -la or -lh etc). **
+**Task 1.5: Examine the contents of the tutorials directory. Try options such as -l, -t, -a and -X. Also check if you can combine many options together (like -la or -lh etc).**
 Try these:
 ```bash
 ls -l tutorials
@@ -218,7 +218,7 @@ tar -czvf OUTFILE.tar.gz DIRECTORY # archive and compress all files in a directo
 tar -czvf OUTFILE.tar.gz *.txt  # archive and compress all ".txt" files in current directory into one archive file
 ```
 
-** Task 1.10: Archive and compress the BACKUP_WORKSHOP directory you created in ** Task 1.3 (you can name it as backup.tar.gz or anything you want) **
+**Task 1.10: Archive and compress the BACKUP_WORKSHOP directory you created in ** Task 1.3 (you can name it as backup.tar.gz or anything you want)**
 
 ```bash
 tar -czvf backup.tar.gz BACKUP_WORKSHOP
