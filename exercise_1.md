@@ -305,7 +305,7 @@ OPTIONS include
 ```bash
 ls -l
 ```
-_What permissions does the group have on these files?_ /
+_What permissions does the group have on these files?_    
 _Which group does your account belong? Genome Informatics Facility_
 
 
