@@ -1,5 +1,5 @@
 # Exercise 1
-This exercise is designed to provide the basic skills required for working in the UNIX environment, using plenty of relevant examples, specifically for biologists.  If you are using your personal computer, make sure that you have downloaded the files required for the workshop. This exercise will provide you information regarding navigation, files and directory creation/modification and some administrative things related to file permissions.
+This exercise is designed to provide the basic skills required for working in the `UNIX` environment, using plenty of relevant examples, specifically for biologists.  If you are using your personal computer, make sure that you have downloaded the files required for the workshop. This exercise will provide you information regarding navigation, files and directory creation/modification and some administrative things related to file permissions.
 
 ## Navigation
 This section will introduce you to some basic file/directory navigation and manipulation techniques.
@@ -111,17 +111,17 @@ ls -lh tutorials
 ls -t tutorials
 ```
 ## Creating and editing files
+To create a new file
 ```bash
-touch FILENAME
+touch FILENAME # creates a new file in the present location
 ```
-Creates a new file in the present location
-
+To edit a file
 ```bash
-nano FILENAME
+nano FILENAME # opens a text editor
 ```
-Like notepad, this text editor lets you edit a file. 
+Like `notepad` or `textedit`, this text editor lets you edit a file. 
 
-**Task 1.6: Create a new file named firstfile inside the tutorials directory. You can create using touch or using nano. Then add some contents (Your name and email address) to the firstfile (using nano). After editing, press Ctrl + X to exit, then enter y to save changes and confirm the file name.**
+**Task 1.6: Create a new file named `firstfile` inside the tutorials directory. You can create using touch or using nano. Then add some contents (Your name and email address) to the `firstfile` (using `nano`). After editing, press `Ctrl` + `X` to exit, then enter `y` to save changes and confirm the file name.**
 ```bash
 touch firstfile
 nano firstfile
@@ -139,44 +139,44 @@ more FILENAME # try this with AT_cDNA.fa
 ```
 Like less command, also, displays file contents on the screen with line scrolling but uses only space bar or Enter key to scroll. When you are done press q to exit.
 ```bash
-cat FILENAME # now, try this: cat AT_cDNA.fa
+cat FILENAME # now, try this on AT_cDNA.fa
 ```
 Simplest form of displaying contents. It catalogs the entire contents of the file on the screen. In case of large files, entire file will scroll on the screen without pausing
 ```bash
-head FILENAME # try this: head AT_cDNA.fa
+head FILENAME # try this on AT_cDNA.fa
 ```
 Displays only the starting lines of a file. The default is first ten lines. But, any number of lines can be displayed using –n option (followed by required number of lines). 
 ```bash
-tail FILENAME # try this: tail AT_cDNA.fa
+tail FILENAME # try this on AT_cDNA.fa
 ```
-Similar to head, but displays the last 10 lines. Again –n option can be used to change this.
-More information about any of these commands can be found in man pages (man command)
+Similar to `head`, but displays the last 10 lines. Again `–n` option can be used to change this.
+More information about any of these commands can be found in `man` pages (`man` command)
 
-**Task 1.7: Try using all these commands on the RefSeq.faa. You are also welcome to try these commands on various other files that are present in the tutorials directory. These commands don’t change the contents of the file; they just display them on the screen.**
+**Task 1.7: Try using all these commands on the `RefSeq.faa`. You are also welcome to try these commands on various other files that are present in the tutorials directory. These commands don’t change the contents of the file; they just display them on the screen.**
 
 ## Deleting files and directories
 
-To delete directories from the system, you can use rmdir (remove directory) command. You can also use rm command to delete file(s).
+To delete directories from the system, you can use `rmdir` (remove directory) command. You can also use `rm` command to delete file(s).
 
 ```bash
 rmdir DIRECTORY  
 ```
-The directory should be empty before you use the rmdir command. 
+The directory should be empty before you use the `rmdir` command. 
 ```bash
 rm FILE
 ```
-To delete a file rm command can be used
+To delete a file `rm` command can be used
 Some useful options include 
 ```bash
 –r 	recursively delete files
 -f 	delete forcefully 
 ```
 ```bash
-rm –rf DIRECTORY  [DO NOT USE THIS NOW!]
+rm –rf DIRECTORY  #[DO NOT USE THIS NOW!]
 ```
 When you want to delete a folder, with all its content
 
-**Task 1.8: Delete the directory named delete_me inside the tutorials directory (to do this you may first want to delete the sample.txt file inside this directory).**
+**Task 1.8: Delete the directory named `delete_me` inside the tutorials directory (to do this you may first want to delete the `sample.txt` file inside this directory).**
 
 ```bash
 cd delete_me
@@ -187,7 +187,7 @@ rmdir delete_me
 
 ## Compressing files
 
-There are several options for archiving and compressing groups of files or directories. Compressed files are not only easier to handle (copy/move) but also occupy less size on the disk (less than 1/3 of the original size). In Linux systems you can use zip, tar or gz for archiving and compressing files/directories. 
+There are several options for archiving and compressing groups of files or directories. Compressed files are not only easier to handle (copy/move) but also occupy less size on the disk (less than 1/3 of the original size). In Linux systems you can use `zip`, `tar` or `gz` for archiving and compressing files/directories. 
 
 ### ZIP compression/extraction
 
@@ -202,11 +202,11 @@ unzip SOMEFILE.zip # Decompress a file
 ```bash
 zip AT_genes.gff.zip AT_genes.gff
 ```
-Is there any size difference before and after compressing? 		Y/N
+_Is there any size difference before and after compressing?_
 
 ### Archiving
 
-tar (tape archive) utility saves many files together into a single archive file, and restores individual files from the archive. It also includes automatic archive compression/decompression options and special features for incremental and full backups.
+`tar` ( _t_ pe _ar_ chive) utility saves many files together into a single archive file, and restores individual files from the archive. It also includes automatic archive compression/decompression options and special features for incremental and full backups.
 
 ```bash
 tar -cvf OUTFILE.tar INFILE # archive INFILE
@@ -218,14 +218,14 @@ tar -czvf OUTFILE.tar.gz DIRECTORY # archive and compress all files in a directo
 tar -czvf OUTFILE.tar.gz *.txt  # archive and compress all ".txt" files in current directory into one archive file
 ```
 
-**Task 1.10: Archive and compress the BACKUP_WORKSHOP directory you created in task 1.3 (you can name it as backup.tar.gz or anything you want)**
+**Task 1.10: Archive and compress the `BACKUP_WORKSHOP` directory you created in task 1.3 (you can name it as `backup.tar.gz` or anything you want)**
 
 ```bash
 tar -czvf backup.tar.gz BACKUP_WORKSHOP
 ```
 ### GZIP compressing/extracting
 
-gzip (gnu zip) compression utility designed as a replacement for compress, with much better compression and no patented algorithms. The standard compression system for all GNU software.
+`gzip` ( _g_ nu _zip_ ) compression utility designed as a replacement for compress, with much better compression and no patented algorithms. The standard compression system for all GNU software.
 
 ```bash
 gzip SOMEFILE # compress SOMEFILE (also removes uncompressed file)
@@ -243,7 +243,7 @@ ls –lh
 
 ### Changing permissions
 
-All files in the UNIX system will have a set of permissions which define what can be done with that file and by whom. (What = read (view contents), write (modify) and execute (run script) Whom=User (owner), group (that account belongs to) and everyone else). They are denoted as
+All files in the `UNIX` system will have a set of permissions which define what can be done with that file and by whom. (What = read (view contents), write (modify) and execute (run script) Whom=User (owner), group (that account belongs to) and everyone else). They are denoted as
 ```
 PERMISSIONS			RELATIONS
 read		r		owner		u
@@ -251,7 +251,7 @@ write		w		group		g
 execute		x		others		o
 					all users	a
 ```					
-To look at the permissions for any file, you can list the files with l option (ls –l). 
+To look at the permissions for any file, you can list the files with `l` option (`ls –l`). 
 ```
 Permissions	User	Group	Size	Date modified	Name
 lrwxrwxrwx 1 arnstrm GIF    24 Jan  7 09:40 arnstrm -> /data006c/GIF_2c/arnstrm
@@ -269,9 +269,18 @@ drwxr-xr-x 5 arnstrm GIF  4096 Jul  1 09:26 perl5
 -rw-rw-r-- 1 arnstrm GIF 52974 Jun 25 16:31 test.pdf
 -rw-rw-r-- 1 arnstrm GIF 11326 May 19 09:47 validate_features.pl
 
-The first characters in first filed represents various things, such as d=directory, l=link, r=read, w=write, x=execute, -=blank, u=user, g=group, o=others.
+The first characters in first filed represents various things, such as   
+d=directory  
+l=link  
+r=read  
+w=write  
+x=execute  
+-=blank  
+u=user  
+g=group  
+o=others
 ```
-To set/modify a file's permissions you need to use the chmod command (change mode). Only the owner of a file can alter a file's permissions. 
+To set/modify a file's permissions you need to use the `chmod` command ( _ch_ ange _mod_ e). Only the owner of a file can alter a file's permissions. 
 
 The syntax: 
 
@@ -295,7 +304,7 @@ chmod a-rwx FILENAME # removes all permissions for others
 chmod a-x FILENAME # removes execution permissions for others
 ```
 
-OPTIONS include
+`OPTIONS` include
 ```
 -R 	recursively (the permissions are applied to all the files, directories present inside the directory)
 ```
