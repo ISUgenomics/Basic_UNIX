@@ -25,9 +25,9 @@ cd DIRECTORY
 ```
 This changes your location back to your `DIRECTORY`.
  
-**Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.**
+**Task 1.1: Now change your directory to the `WORKSHOP_FILES` directory present in your home directory.**
 
-You can type in first few letters of the directory name and then press tab to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing tab twice will list all the matching names. You can also recall your previous commands by pressing up/down arrow or browse all your previously used commands by typing history on your terminal (typically last 500 commands will be saved in this file).
+You can type in first few letters of the directory name and then press `tab` to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing `tab` twice will list all the matching names. You can also recall your previous commands by pressing `up/down` arrow or browse all your previously used commands by typing `history` on your terminal (typically last 500 commands will be saved in this file).
 
 ## Directories and files
 ### Making Directories
@@ -44,7 +44,7 @@ mkdir FirstDirectory
 ```
 ### Copying files/directories
 
-To copy a file, `cp` (*c*o_p_y) command is used. When using this command you have to provide both source file and destination file.
+To copy a file, `cp` ( *c* o _p_ y) command is used. When using this command you have to provide both source file and destination file.
 ```bash
 cp SOURCE DESTINATION
 ```
@@ -57,9 +57,7 @@ This opens the manual for the `cp` command. Take a look at the manual of `cp` co
 Looking at the man page for `cp` command, what options can be used to copy a directory (including all files within it)?	
 How else you can get help on `cp` command (other than `man`)?
 
-**Task 1.3: Now change your directory back to the home directory.**
-
-Create a copy of `WORKSHOP_FILES` and name it as `BACKUP_WORKSHOP`).**
+**Task 1.3: Now change your directory back to the home directory. Create a copy of `WORKSHOP_FILES` and name it as `BACKUP_WORKSHOP`).**  
 This will serve as a backup copy of all files that are required for the workshop (in case you accidentally modify the contents while working).
 
 ```bash
@@ -67,29 +65,29 @@ cp -r WORKSHOP_FILES BACKUP_WORKSHOP
 ```
 
 ### Moving directories
-To move a file or a directory, mv (move) command is used. Again, like the cp command you need to provide both source file and destination file.
+To move a file or a directory, mv ( _m_ o _v_ e) command is used. Again, like the `cp` command you need to provide both source file and destination file.
 
 ```bash
 mv SOURCE DESTINATION
 ```
 
-Absolute path also works fine. Some of the options used by cp command also work with mv command. mv can also be used to rename files and directories
+Absolute path also works fine. Some of the options used by `cp` command also work with `mv` command. `mv` can also be used to rename files and directories
 
 ```bash
 mv OLDNAME NEWNAME
 ```
 
-**Task 1.4: Rename WORKSHOP_FILES as tutorials.**
+**Task 1.4: Rename `WORKSHOP_FILES` as `tutorials`.**
 ```bash
 mv WORKSHOP_FILES tutorials
 ```
 ## Listing directory contents
-The contents of a dir can be viewed using ls (list) command. 
+The contents of a dir can be viewed using `ls` ( _l_ i _s_ t) command. 
 ```bash
 ls DIRECTORY		# now try it with tutorials directory 
 ```
 If no directory name is provided then ls will list all the contents of the present directory.  
-Like any other command, you can use absolute path or abbreviated path. There are also various options available for ls command. 
+Like any other command, you can use absolute path or abbreviated path. There are also various options available for `ls` command. 
 Some very useful options include:
 ```bash
 ls –l # lists all the files in lengthy or detailed view
@@ -97,9 +95,9 @@ ls –t # lists all the files, sorted based on creation time
 ls –S # lists all the files, sorted based on size
 ```
 You can also combine these options together for getting more focused results.
-Looking at the manual for ls, what option can you use to view hidden files in a directory (files starting with dot)? 								____________________
 
-Can you sort the files based on its extension? How?			____________________
+_Looking at the manual for `ls`, what option can you use to view hidden files in a directory (files starting with dot)?_   
+_Can you sort the files based on its extension? How?_
 
 **Task 1.5: Examine the contents of the tutorials directory. Try options such as -l, -t, -a and -X. Also check if you can combine many options together (like -la or -lh etc).**
 Try these:
