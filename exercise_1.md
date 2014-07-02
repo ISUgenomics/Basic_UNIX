@@ -9,7 +9,7 @@ Typing
 ```bash
 pwd
 ```
-should return `/home/username`. Basically, it returns you the present working directory (*p*rint *w*orking *d*irectory).
+should return `/home/username`. Basically, it returns you the present working directory (*p* rint *w* orking *d* irectory).
 This means, you are now working in the `username` directory, which is located in `home` directory. The directory that you will be in after logging in is your home directory. You can also avoid writing the full path by using ~ in front of your username.
 `~username` 	same as	`/home/username`
 Present directory is represented as `.` (dot) and parent directory is represented as `..` (dot dot)
@@ -25,7 +25,7 @@ cd DIRECTORY
 ```
 This changes your location back to your `DIRECTORY`.
  
-**Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.** 
+**Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.**
 
 You can type in first few letters of the directory name and then press tab to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing tab twice will list all the matching names. You can also recall your previous commands by pressing up/down arrow or browse all your previously used commands by typing history on your terminal (typically last 500 commands will be saved in this file).
 
@@ -52,12 +52,12 @@ You can also specify the absolute path of the source and/or destination file. To
 ```bash
 man cp
 ```
-This opens the manual for the `cp` command. Take a look at the manual of `cp` command (use arrow keys to move top or bottom of the page). `OPTIONS` are optional parameters that can be used to accomplish more from the same command. _Eg.,_ by using option `–i` with the regular `cp` command, you can always make sure that you are not overwriting the existing file while copying. The syntax for using the options will also be provided in the manual. **To exit, press q.**
+This opens the manual for the `cp` command. Take a look at the manual of `cp` command (use arrow keys to move top or bottom of the page). `OPTIONS` are optional parameters that can be used to accomplish more from the same command. _Eg.,_ by using option `–i` with the regular `cp` command, you can always make sure that you are not overwriting the existing file while copying. The syntax for using the options will also be provided in the manual.**To exit, press q.**
 
 Looking at the man page for `cp` command, what options can be used to copy a directory (including all files within it)?	
 How else you can get help on `cp` command (other than `man`)?
 
-**Task 1.3: Now change your directory back to the home directory. **
+**Task 1.3: Now change your directory back to the home directory.**
 
 Create a copy of `WORKSHOP_FILES` and name it as `BACKUP_WORKSHOP`).**
 This will serve as a backup copy of all files that are required for the workshop (in case you accidentally modify the contents while working).
@@ -79,7 +79,7 @@ Absolute path also works fine. Some of the options used by cp command also work 
 mv OLDNAME NEWNAME
 ```
 
-**Task 1.4: Rename WORKSHOP_FILES as tutorials. **
+**Task 1.4: Rename WORKSHOP_FILES as tutorials.**
 ```bash
 mv WORKSHOP_FILES tutorials
 ```
@@ -197,7 +197,7 @@ zip -r OUTDIR.zip DIRECTORY # compress all files in a DIRECTORY into one archive
 zip -r OUTFILE.zip . -i *.txt # Compress all txt files in a DIRECTORY into one archive file (OUTFILE.zip)
 unzip SOMEFILE.zip # Decompress a file
 ```
-**Task 1.9: Zip AT_genes.gff file located in the tutorials directory. Check the file size before and after zip compression (Hint: use ls –lh to check file sizes). **
+**Task 1.9: Zip AT_genes.gff file located in the tutorials directory. Check the file size before and after zip compression (Hint: use ls –lh to check file sizes).**
 
 ```bash
 zip AT_genes.gff.zip AT_genes.gff
@@ -300,7 +300,7 @@ OPTIONS include
 -R 	recursively (the permissions are applied to all the files, directories present inside the directory)
 ```
 
-** Task 1.12: Check the permissions for the files located in the tutorials directory. **
+**Task 1.12: Check the permissions for the files located in the tutorials directory.**
  
 ```bash
 ls -l
