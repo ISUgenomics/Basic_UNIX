@@ -25,7 +25,7 @@ cd DIRECTORY
 ```
 This changes your location back to your `DIRECTORY`.
  
-**** Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.** 
+** Task 1.1: Now change your directory to the WORKSHOP_FILES directory present in your home directory.** 
 
 You can type in first few letters of the directory name and then press tab to auto complete rest of the name (especially useful when the file/directory name is long). This only works when there are unique matches for the starting letters you have typed. If there is more than one matching files/directories pressing tab twice will list all the matching names. You can also recall your previous commands by pressing up/down arrow or browse all your previously used commands by typing history on your terminal (typically last 500 commands will be saved in this file).
 
@@ -38,7 +38,7 @@ mkdir DIRECTORY
 ```
 Unlike PC/Mac folders, here you can’t have space in your directory name. Alternatively, you can also specify the path where you want to create your new folder.
 
-**** Task 1.2: Make a new directory named `FirstDirectory` within the `WORKSHOP_FILES` directory. Then change your directory to the `FirstDirectory`.**
+** Task 1.2: Make a new directory named `FirstDirectory` within the `WORKSHOP_FILES` directory. Then change your directory to the `FirstDirectory`.**
 ```bash
 mkdir FirstDirectory
 ```
@@ -57,7 +57,7 @@ This opens the manual for the `cp` command. Take a look at the manual of `cp` co
 Looking at the man page for `cp` command, what options can be used to copy a directory (including all files within it)?	
 How else you can get help on `cp` command (other than `man`)?
 
-**** Task 1.3: Now change your directory back to the home directory. 
+** Task 1.3: Now change your directory back to the home directory. **
 
 Create a copy of `WORKSHOP_FILES` and name it as `BACKUP_WORKSHOP`).**
 This will serve as a backup copy of all files that are required for the workshop (in case you accidentally modify the contents while working).
@@ -79,7 +79,7 @@ Absolute path also works fine. Some of the options used by cp command also work 
 mv OLDNAME NEWNAME
 ```
 
-** Task 1.4: Rename WORKSHOP_FILES as tutorials. 
+** Task 1.4: Rename WORKSHOP_FILES as tutorials. **
 ```bash
 mv WORKSHOP_FILES tutorials
 ```
@@ -101,8 +101,8 @@ Looking at the manual for ls, what option can you use to view hidden files in a 
 
 Can you sort the files based on its extension? How?			____________________
 
-** Task 1.5: Examine the contents of the tutorials directory. Try options such as -l, -t, -a and -X. Also check if you can combine many options together (like -la or -lh etc). Try these:
-
+** Task 1.5: Examine the contents of the tutorials directory. Try options such as -l, -t, -a and -X. Also check if you can combine many options together (like -la or -lh etc). **
+Try these:
 ```bash
 ls -l tutorials
 ls -a
@@ -110,7 +110,7 @@ ls -1 tutorials
 ls -lh tutorials
 ls -t tutorials
 ```
-## CREATING AND EDITING FILES
+## Creating and editing files
 ```bash
 touch FILENAME
 ```
@@ -121,21 +121,21 @@ nano FILENAME
 ```
 Like notepad, this text editor lets you edit a file. 
 
-** Task 1.6: Create a new file named firstfile inside the tutorials directory. You can create using touch or using nano. Then add some contents (Your name and email address) to the firstfile (using nano). After editing, press Ctrl + X to exit, then enter y to save changes and confirm the file name.
+** Task 1.6: Create a new file named firstfile inside the tutorials directory. You can create using touch or using nano. Then add some contents (Your name and email address) to the firstfile (using nano). After editing, press Ctrl + X to exit, then enter y to save changes and confirm the file name.**
 ```bash
 touch firstfile
 nano firstfile
 ```
-## VIEWING CONTENTS OF THE FILES
+## View contents of the file
 
 There are various commands to print the contents of the file in bash. Most of these commands are often used in specific contexts. All these commands when executed with filenames displays the contents on the screen. Most common ones are less, more, cat, head and tail.
 ```bash
-less FILENAME # now, try less AT_cDNA.fa
+less FILENAME # try this with AT_cDNA.fa
 ```
 Displays file contents on the screen with line scrolling (to scroll you can use arrow keys, PgUp/PgDn keys, space bar or Enter key). When you are done press q to exit.
 
 ```bash
-more FILENAME			try this: more AT_cDNA.fa
+more FILENAME # try this with AT_cDNA.fa
 ```
 Like less command, also, displays file contents on the screen with line scrolling but uses only space bar or Enter key to scroll. When you are done press q to exit.
 ```bash
@@ -152,9 +152,9 @@ tail FILENAME # try this: tail AT_cDNA.fa
 Similar to head, but displays the last 10 lines. Again –n option can be used to change this.
 More information about any of these commands can be found in man pages (man command)
 
-** Task 1.7: Try using all these commands on the RefSeq.faa. You are also welcome to try these commands on various other files that are present in the tutorials directory. These commands don’t change the contents of the file; they just display them on the screen.
+** Task 1.7: Try using all these commands on the RefSeq.faa. You are also welcome to try these commands on various other files that are present in the tutorials directory. These commands don’t change the contents of the file; they just display them on the screen.**
 
-## DELETING FILES AND DIRECTORIES
+## Deleting files and directories
 
 To delete directories from the system, you can use rmdir (remove directory) command. You can also use rm command to delete file(s).
 
@@ -176,7 +176,7 @@ rm –rf DIRECTORY  [DO NOT USE THIS NOW!]
 ```
 When you want to delete a folder, with all its content
 
-** Task 1.8: Delete the directory named delete_me inside the tutorials directory (to do this you may first want to delete the sample.txt file inside this directory).
+** Task 1.8: Delete the directory named delete_me inside the tutorials directory (to do this you may first want to delete the sample.txt file inside this directory).**
 
 ```bash
 cd delete_me
@@ -185,11 +185,11 @@ cd ..
 rmdir delete_me
 ```
 
-## COMPRESSING FILES
+## Compressing files
 
 There are several options for archiving and compressing groups of files or directories. Compressed files are not only easier to handle (copy/move) but also occupy less size on the disk (less than 1/3 of the original size). In Linux systems you can use zip, tar or gz for archiving and compressing files/directories. 
 
-ZIP compression/extraction
+### ZIP compression/extraction
 
 ```bash
 zip OUTFILE.zip INFILE.txt # compress INFILE.txt
@@ -197,12 +197,14 @@ zip -r OUTDIR.zip DIRECTORY # compress all files in a DIRECTORY into one archive
 zip -r OUTFILE.zip . -i *.txt # Compress all txt files in a DIRECTORY into one archive file (OUTFILE.zip)
 unzip SOMEFILE.zip # Decompress a file
 ```
-** Task 1.9: Zip AT_genes.gff file located in the tutorials directory. Check the file size before and after zip compression (Hint: use ls –lh to check file sizes). 
+** Task 1.9: Zip AT_genes.gff file located in the tutorials directory. Check the file size before and after zip compression (Hint: use ls –lh to check file sizes). **
 
 ```bash
 zip AT_genes.gff.zip AT_genes.gff
 ```
 Is there any size difference before and after compressing? 		Y/N
+
+### Archiving
 
 tar (tape archive) utility saves many files together into a single archive file, and restores individual files from the archive. It also includes automatic archive compression/decompression options and special features for incremental and full backups.
 
@@ -216,18 +218,20 @@ tar -czvf OUTFILE.tar.gz DIRECTORY # archive and compress all files in a directo
 tar -czvf OUTFILE.tar.gz *.txt  # archive and compress all ".txt" files in current directory into one archive file
 ```
 
-** Task 1.10: Archive and compress the BACKUP_WORKSHOP directory you created in ** Task 1.3 (you can name it as backup.tar.gz or anything you want) 
+** Task 1.10: Archive and compress the BACKUP_WORKSHOP directory you created in ** Task 1.3 (you can name it as backup.tar.gz or anything you want) **
 
 ```bash
 tar -czvf backup.tar.gz BACKUP_WORKSHOP
 ```
+### GZIP compressing/extracting
+
 gzip (gnu zip) compression utility designed as a replacement for compress, with much better compression and no patented algorithms. The standard compression system for all GNU software.
 
 ```bash
 gzip SOMEFILE # compress SOMEFILE (also removes uncompressed file)
 gunzip SOMEFILE.gz # uncompress SOMEFILE.gz (also removes compressed file)
 ```
-** Task 1.11: gzip the file AT_genes.gff and examine the size. gunzip it back so that you can use this file for the later exercises.
+** Task 1.11: gzip the file AT_genes.gff and examine the size. gunzip it back so that you can use this file for the later exercises.**
 
 ```bash
 gzip AT_genes.gff
@@ -235,21 +239,39 @@ ls -lh
 gunzip AT_genes.gff.gz
 ls –lh
 ```
-## ADMINISTRATIVE COMMANDS
+## Administrative commands
 
-### CHANGING PERMISSIONS
+### Changing permissions
 
 All files in the UNIX system will have a set of permissions which define what can be done with that file and by whom. (What = read (view contents), write (modify) and execute (run script) Whom=User (owner), group (that account belongs to) and everyone else). They are denoted as
-PERMISSIONS				RELATIONS
-read		r			owner		u
-write		w			group		g
-execute	x			others	o
-       all users	a
+```
+PERMISSIONS			RELATIONS
+read		r		owner		u
+write		w		group		g
+execute		x		others		o
+					all users	a
+```					
 To look at the permissions for any file, you can list the files with l option (ls –l). 
+```
 Permissions	User	Group	Size	Date modified	Name
-
+lrwxrwxrwx 1 arnstrm GIF    24 Jan  7 09:40 arnstrm -> /data006c/GIF_2c/arnstrm
+-rwxr--r-- 1 arnstrm GIF  1371 Jul  1 14:14 bashrc_old
+drwxrwx--- 3 arnstrm GIF  4096 Jun 30 23:29 bin
+drwxrwxr-x 5 arnstrm GIF  4096 Mar 18 09:10 coreutils
+-rwxr-xr-x 1 arnstrm GIF 11908 Jan  7 13:07 cshrc_severin
+drwxrwxr-x 4 arnstrm GIF  4096 Mar 18 09:17 dos2unix
+-rw-rw-r-- 1 arnstrm GIF 46470 May 19 09:48 gtf2gff3.pl
+drwxrwxr-x 4 arnstrm GIF  4096 Apr 10 09:15 igv
+-rw-rw-r-- 1 arnstrm GIF   930 May 16 11:05 module_file.txt
+-rw-rw-r-- 1 arnstrm GIF  8014 Jun 30 14:07 output.txt
+drwxr-xr-x 5 arnstrm GIF  4096 Jul  1 09:26 perl5
+-rwxrwx--- 1 arnstrm GIF  2138 Jun 25 19:50 template.sub
+-rw-rw-r-- 1 arnstrm GIF 52974 Jun 25 16:31 test.pdf
+-rw-rw-r-- 1 arnstrm GIF 11326 May 19 09:47 validate_features.pl
+```
 
 (d=directory, l=link, r=read, w=write, x=execute, -=blank, u=user, g=group, o=others)
+
 To set/modify a file's permissions you need to use the chmod command (change mode). Only the owner of a file can alter a file's permissions. 
 
 The syntax: 
@@ -261,27 +283,31 @@ Add permissions
 
 ```bash
 chmod RELATIONS+PERMISSIONS FILENAME
-chmod g+rwx FILENAME		grants read, write and execute permissions for group
-chmod g+r FILENAME		grants read permission for group
-chmod a+rwx FILENAME 	makes the file public (don’t do this to any file/directory unless you want to share)
+chmod g+rwx FILENAME # grants read, write and execute permissions for group
+chmod g+r FILENAME # grants read permission for group
+chmod a+rwx FILENAME # makes the file public (don’t do this to any file/directory unless you want to share)
 ```
 Remove permissions
-
 ```bash
 chmod RELATIONS-PERMISSIONS FILENAME
-chmod g-wx FILENAME		removes write and execute permissions for group
-chmod g-rwx FILENAME		removes all permissions for group
-chmod a-rwx FILENAME	 	removes all permissions for others
-chmod a-x FILENAME	 	removes execution permissions for others
+chmod g-wx FILENAME # removes write and execute permissions for group
+chmod g-rwx FILENAME # removes all permissions for group
+chmod a-rwx FILENAME # removes all permissions for others
+chmod a-x FILENAME # removes execution permissions for others
 ```
 
 OPTIONS include
+```
 -R 	recursively (the permissions are applied to all the files, directories present inside the directory)
-** Task 1.12: Check the permissions for the files located in the tutorials directory. Do 
+```
+
+** Task 1.12: Check the permissions for the files located in the tutorials directory. **
+ 
 ```bash
 ls -l
 ```
-What permissions does the group have on these files?  			________________________
-Which group does your account belong to?				________________________
-		Genome Informatics Facility
+What permissions does the group have on these files? 
+Which group does your account belong? Genome Informatics Facility
 
+
+Next, go to [Exercise 2] ()
